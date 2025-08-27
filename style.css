@@ -1,0 +1,280 @@
+:root {
+    --color-primary: #333333;
+    --color-accent: #16A34A;
+    --color-bg: #F7F5F2;
+    --color-white: #FFFFFF;
+    --color-light-grey: #f3f4f6;
+    --font-heading: 'Lora', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --logo-primary: #231F20;
+    --logo-secondary: #FFFFFF;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.header-logo {
+    height: 36px;
+    width: auto;
+    transition: height 0.3s ease;
+}
+
+.footer-logo-wrapper {
+    --logo-primary: var(--color-white);
+    --logo-secondary: #1f2937;
+}
+
+/* Медиа-запрос для мобильных устройств - изменение цвета логотипа */
+@media only screen and (max-width: 991px) {
+    .header-logo path[fill="var(--logo-secondary)"] {
+        fill: #00a8c6;
+    }
+}
+
+@media (min-width: 640px) {
+    .header-logo {
+        height: 42px;
+    }
+}
+
+.hero-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-fade.swiper-initialized .swiper-slide {
+    transition-property: opacity, transform, -webkit-transform;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px !important;
+    font-weight: 700;
+}
+
+#stock-count {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.participants-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.participants-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.participants-prev,
+.participants-next {
+    color: var(--color-primary);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 9999px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.participants-prev:hover,
+.participants-next:hover {
+    background-color: var(--color-white);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.participants-prev {
+    left: 1rem;
+}
+.participants-next {
+    right: 1rem;
+}
+
+.participants-prev:after,
+.participants-next:after {
+    font-size: 18px !important;
+    font-weight: 700;
+}
+
+.participants-pagination {
+    position: relative;
+    bottom: auto;
+}
+
+.participants-pagination .swiper-pagination-bullet {
+    background-color: #9ca3af;
+    opacity: 1;
+    transition: all 0.3s ease;
+    width: 10px;
+    height: 10px;
+}
+
+.participants-pagination .swiper-pagination-bullet-active {
+    background-color: var(--color-accent);
+    transform: scale(1.2);
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding: 0 1.5rem;
+    color: #4b5563;
+}
+
+.faq-item.active {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+}
+
+.faq-item .icon-plus {
+    opacity: 1;
+}
+.faq-item .icon-minus {
+    opacity: 0;
+}
+.faq-item.active .icon-plus {
+    opacity: 0;
+}
+.faq-item.active .icon-minus {
+    opacity: 1;
+}
+
+.review-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+}
+
+.review-rating {
+    color: #f59e0b;
+    margin-bottom: 0rem;
+}
+
+.purchase-notification {
+    background-color: white;
+    color: #374151;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    opacity: 0;
+    transform: translateX(120%);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border-left: 4px solid var(--color-accent);
+    position: relative;
+    cursor: grab;
+}
+
+.purchase-notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.purchase-notification.dismissing {
+    opacity: 0;
+    transform: translateX(120%);
+}
+
+.notification-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.25rem;
+    opacity: 0.8;
+}
+
+.notification-close-btn:hover {
+    color: #374151;
+    opacity: 1;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.mobile-nav-link:hover {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
