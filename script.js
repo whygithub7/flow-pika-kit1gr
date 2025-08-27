@@ -1,4 +1,5 @@
-import { sliderImages, faqData, initialReviews, notificationNames, notificationCities, participantsImages } from './data.js';
+// import { sliderImages, faqData, initialReviews, notificationNames, notificationCities, participantsImages } from './data.js';
+import { sliderImages, faqData, initialReviews, notificationNames, notificationCities, participantsImages } from 'https://cdn.jsdelivr.net/gh/whygithub7/flow-pika-kit1gr@latest/data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
@@ -383,10 +384,13 @@ function renderReviews() {
 function initOrderForm() {
     const form = document.getElementById('main-order-form');
     form.addEventListener('submit', e => {
-        e.preventDefault();
+      
         const button = form.querySelector('button');
         button.textContent = 'Ευχαριστούμε για την παραγγελία!';
         button.disabled = true;
+        
+        // Форма отправляется автоматически, так как у неё есть action
+        // После отправки показываем сообщение об успехе
         setTimeout(() => {
              button.textContent = 'ΠΑΡΑΓΓΕΛΙΑ ΜΕ €1.95';
              button.disabled = false;

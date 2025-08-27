@@ -40,11 +40,9 @@ body {
     --logo-secondary: #1f2937;
 }
 
-/* Медиа-запрос для мобильных устройств - изменение цвета логотипа */
-@media only screen and (max-width: 991px) {
-    .header-logo path[fill="var(--logo-secondary)"] {
-        fill: #00a8c6;
-    }
+/* Стили для логотипа - изменение цвета на всех экранах */
+.header-logo path[fill="var(--logo-secondary)"] {
+    fill: #00a8c6;
 }
 
 @media (min-width: 640px) {

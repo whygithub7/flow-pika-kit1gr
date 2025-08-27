@@ -1,13 +1,14 @@
 export const sliderImages = [
-    "img/0009304_navarino-icons-collection-hamper-8-items.avif",
+    "img/picka_logo.webp",
     "img/0008859_navarino-icons-collection-hamper-8-items.avif",
+    "img/0009304_navarino-icons-collection-hamper-8-items.avif",
     "img/0008860_navarino-icons-collection-hamper-8-items.avif",
     "img/0008861_navarino-icons-collection-hamper-8-items.avif",
     "img/0008854_navarino-icons-collection-hamper-8-items.avif",
     "img/0008856_navarino-icons-collection-hamper-8-items.avif",
     "img/0008857_navarino-icons-collection-hamper-8-items.avif",
-    "img/sl4.webp",
-    "img/picka_logo.webp"
+    "img/sl4.webp"
+    
 ];
 
 export const participantsImages = [
