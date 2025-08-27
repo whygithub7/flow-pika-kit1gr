@@ -25,7 +25,6 @@ export const participantsImages = [
     "pickaprev/446826855_1119245842686789_3684902383706487577_n.jpg",
     "pickaprev/E0zpopdWYAc370c.jpg",
     "pickaprev/E7S_3EAXoAYVaB7.jpg",
-    "pickaprev/E7S_3EAXoAYVaB7 (1).jpg",
     "pickaprev/E10-kHlWEAEVyvq.jpg",
     "pickaprev/E40fI63XMAgVW-G.jpg",
     "pickaprev/E49GJekXoAYefzD.jpg",

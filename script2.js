@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFaqAccordion();
     initStockCounter();
     initReviews();
-    initOrderForm();
+   
 });
 
 function initStickyHeader() {
@@ -378,23 +378,4 @@ function renderReviews() {
             </div>
         `;
     }).join('');
-}
-
-
-function initOrderForm() {
-    const form = document.getElementById('main-order-form');
-    form.addEventListener('submit', e => {
-      
-        const button = form.querySelector('button');
-        button.textContent = 'Ευχαριστούμε για την παραγγελία!';
-        button.disabled = true;
-        
-        // Форма отправляется автоматически, так как у неё есть action
-        // После отправки показываем сообщение об успехе
-        setTimeout(() => {
-             button.textContent = 'ΠΑΡΑΓΓΕΛΙΑ ΜΕ €1.95';
-             button.disabled = false;
-             form.reset();
-        }, 3000);
-    });
 }
